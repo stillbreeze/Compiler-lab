@@ -6,6 +6,6 @@ Compiler Lab programs:
 
 3. Moore Machine 
 
-4. Nfa-to-Dfa - Incomplete
+4. Nfa-to-Dfa (Incomplete)
 
 Note: Input tables from txt files pending
