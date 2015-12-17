@@ -47,6 +47,7 @@ int match(int init, int fin, int arr[4][2], int temp[50], int n_inputs, int expr
 void check_escape()
 {
     char esc;
+    printf("\n");
     printf("Press X to escape:\t");
     scanf("%c",&esc);
     if(esc=='X')
@@ -74,7 +75,7 @@ int main()
             if(j)
             {
                 printf("The expression satisfies the given automata\n");
-                printf("The output is :\n");
+                printf("The output is :\t");
                 for(k=0;k<j;k++)
                     printf("%c",(char)output[k]+96);
             }
