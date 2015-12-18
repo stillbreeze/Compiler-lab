@@ -19,7 +19,8 @@ void sort()
         }
     }
 }
-
+//Checks if a line contains a goto and then splits the goto keyword and the target address
+//Stores the goto target address and the next address to an array of leaders
 void split2(char* lineNo,char* line)
 {
     char *res,*tokens;
@@ -42,7 +43,7 @@ void split2(char* lineNo,char* line)
         }
     }
 }
-
+//Splits the address and the TAC
 void split1(char* line)
 {
     char *tokens,*lineNo;
@@ -62,7 +63,7 @@ void split1(char* line)
     //printf("Line: %s",line);
     split2(lineNo,line);
 }
-
+//Reads from the file line by line and calls split1() for each line
 void getLeader()
 {
     FILE * fp;
@@ -76,7 +77,7 @@ void getLeader()
         split1(line);
     fclose(fp);
 }
-
+//Prints the leaders
 void printLeader()
 {
     int j;
@@ -85,7 +86,8 @@ void printLeader()
     for(j=0;j<i;j++)
         printf("%d\t",leaderPos[j]);
 }
-
+//Prints the blocks
+//TODO - remove the TACs with goto statements and conditionals from the block
 void printBlocks()
 {
     int c,d;
